@@ -1,0 +1,309 @@
+/* 🌐 Global Styles */
+:root {
+  --bg: #0f0f0f;
+  --card: #181818;
+  --accent: #ff6b2d;
+  --text: #f3f3f3;
+  --muted: #b3b3b3;
+  --border: rgba(255, 255, 255, 0.08);
+  --radius: 10px;
+  --shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+  --max-width: 1300px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", "Inter", system-ui, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+}
+
+/* 🌟 Header */
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 40px;
+  background: rgba(15, 15, 15, 0.85);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--border);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.logo {
+  font-weight: 700;
+  font-size: 1.6rem;
+  color: var(--accent);
+  letter-spacing: 0.5px;
+}
+
+.nav-links {
+  display: flex;
+  gap: 28px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: var(--muted);
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+.nav-links a:hover {
+  color: var(--accent);
+}
+
+/* 🏠 Hero Section */
+.hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 90px 20px 60px;
+  background: linear-gradient(180deg, #141414 0%, #0f0f0f 100%);
+}
+
+.hero-title {
+  font-size: clamp(2rem, 4vw, 3.2rem);
+  color: var(--text);
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+.hero-sub {
+  font-size: clamp(1rem, 2vw, 1.2rem);
+  color: var(--muted);
+  max-width: 720px;
+  margin-bottom: 50px;
+}
+
+/* 🎞️ Thumbnails */
+.thumbnail-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 18px;
+}
+
+.thumb {
+  background: var(--card);
+  padding: 20px 28px;
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow);
+  color: var(--text);
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.thumb:hover {
+  transform: translateY(-4px);
+  background: var(--accent);
+  color: #fff;
+}
+
+/* 🧱 Services */
+.services {
+  padding: 80px 20px;
+  text-align: center;
+  background: #111;
+}
+
+.services h2 {
+  font-size: 2.2rem;
+  color: var(--accent);
+  margin-bottom: 35px;
+}
+
+.services-grid {
+  display: grid;
+  gap: 25px;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 30px;
+}
+
+.service-card {
+  background: var(--card);
+  padding: 28px;
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 35px rgba(255, 107, 45, 0.2);
+}
+
+.service-img {
+  width: 100%;
+  height: 160px;
+  background: linear-gradient(135deg, #242424, #1a1a1a);
+  border-radius: var(--radius);
+  margin-bottom: 15px;
+}
+
+.service-title {
+  color: var(--text);
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+
+/* ✉️ Contact Form */
+.contact {
+  padding: 100px 20px;
+  background: linear-gradient(180deg, #101010 0%, #181818 100%);
+  text-align: center;
+}
+
+.contact h2 {
+  font-size: 2.2rem;
+  color: var(--accent);
+  margin-bottom: 35px;
+}
+
+.contact-form {
+  max-width: 700px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.contact-form label {
+  text-align: left;
+  font-weight: 500;
+  color: var(--muted);
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 14px 16px;
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+  background: #1a1a1a;
+  color: var(--text);
+  font-size: 1rem;
+  outline: none;
+  transition: border 0.3s ease, background 0.3s ease;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: var(--accent);
+  background: #202020;
+}
+
+.contact-form button {
+  background: var(--accent);
+  color: #fff;
+  font-weight: 600;
+  font-size: 1rem;
+  padding: 14px 0;
+  border-radius: var(--radius);
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: var(--shadow);
+}
+
+.contact-form button:hover {
+  transform: scale(1.02);
+  background: #ff7a45;
+}
+
+/* 👣 Footer */
+.footer {
+  padding: 25px;
+  text-align: center;
+  font-size: 0.95rem;
+  color: var(--muted);
+  border-top: 1px solid var(--border);
+  background: #0d0d0d;
+}
+
+/* 📱 Tablet (≤ 900px) */
+@media (max-width: 900px) {
+  .nav-links {
+    display: none;
+  }
+
+  .hero {
+    padding: 60px 20px;
+  }
+
+  .services {
+    padding: 60px 20px;
+  }
+
+  .contact {
+    padding: 70px 20px;
+  }
+}
+
+/* 💻 Laptops and small desktops (≥ 1024px) */
+@media (min-width: 1024px) {
+  .hero {
+    flex-direction: row;
+    justify-content: center;
+    text-align: left;
+    gap: 50px;
+    padding: 120px 80px;
+  }
+
+  .hero-inner {
+    max-width: 600px;
+  }
+
+  .hero-title {
+    font-size: 3rem;
+  }
+
+  .hero-sub {
+    font-size: 1.2rem;
+  }
+
+  .services-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    padding: 0 80px;
+  }
+
+  .contact-form {
+    max-width: 700px;
+  }
+}
+
+/* 🖥️ Large screens (≥ 1440px) */
+@media (min-width: 1440px) {
+  .hero {
+    padding: 140px 200px;
+  }
+
+  .hero-title {
+    font-size: 3.5rem;
+  }
+
+  .container {
+    max-width: 1400px;
+    margin: 0 auto;
+  }
+
+  .services h2,
+  .contact h2 {
+    font-size: 2.5rem;
+  }
+}

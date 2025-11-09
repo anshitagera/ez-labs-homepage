@@ -1,0 +1,33 @@
+{
+  "info": {
+    "name": "EZ Labs Assignment - Contact Form",
+    "_postman_id": "9a2e1f20-20bb-4c3a-9153-ezlab2025",
+    "description": "Postman collection to test the EZ Labs contact form API endpoint.",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Contact Form Submission",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"name\": \"Anshita Gera\",\n  \"email\": \"anshita@example.com\",\n  \"message\": \"Testing API integration success!\"\n}"
+        },
+        "url": {
+          "raw": "https://vernanbackend.ezlab.in/api/contact-us/",
+          "protocol": "https",
+          "host": ["vernanbackend", "ezlab", "in"],
+          "path": ["api", "contact-us", ""]
+        }
+      },
+      "response": []
+    }
+  ]
+}
